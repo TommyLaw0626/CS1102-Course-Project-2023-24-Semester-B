@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js/dist/index.min.js"></script>
+
+  <title>Fractal Compression</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>Image</span>Compression</h1>
+    </div>
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lossless.html">Lossless</a></li>
+      <li><a href="lossy.html">Lossy</a></li>
+      <li><a href="reference.html">References</a></li>
+    </ul>
+  </header>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Main Content Wrapper -->
+      <div class="main-content-wrapper">
+        <div class="main-content single">
+          <h1 class="post-title">Fractal Compression</h1>
+
+          <div class="post-content">
+            <p>Fractal Compression is a technique that seeks to construct an approximation of the original image that is precise enough to be acceptable, closer to the original at higher compression ratios.
+            </p>
+               
+                <div>
+                    <li>Idea of Affine transformation is applied: any combination of a rotation, scale change, skew or translation (can be done with matrix)</li>
+                </div>  
+                <img src="images/fc_1.jpg" alt="" class="post-images"> <br>
+                <div>
+                    A form matric of affine transformations <br>
+                </div>  
+
+              
+              <p>Techniques:</p>
+               
+              <ul>
+                <ol>
+                    <li>Iterated Function Systems (IFS): The fundamental mathematical framework which forms basis for iterating structures, which is a crucial component in most fractal compression algorithms. </li>
+                    <li>Range Blocks and Domain Blocks: The concept of dividing the image into range blocks and finding matching domain blocks which allows efficient representation of similarities which helps compression process. </li> 
+                    <li>Quadtree Compression: A hierarchical technique that efficiently represents images by dividing them into quadrants, which is combined often with fractal compression to capture local and global similarities in the image. </li> 
+                    <li>Similarity Measures: A technique that quantifies the similarty between range and domain blocks. <br>
+                        <ul>
+                            <li>SSIM</li>
+                            <li>NCC</li>
+                        </ul>
+                    <li>Encoding and Decoding: Algorithms that accurately represent and reconstruct the image from fractal codes, which the efficiency and effectiveness vary due to the type of implementation. </li>
+                    <li>Domain Pool: A technique that enhances compression efficiency bt reusing previously encoded domain blocks, but the size and management of the domain pool affects compression performance. </li>
+                    <li>Pre-processing Techniques: Various techniques including colour space transformations, filtering, histogram equalizations and etc., which reduce noise and improve compression results. </li>
+
+                    </oi>
+                </ul>
+                    Fractal Compression also uses some technical algorithms: <br>
+                    <div>
+                        <li>Partical Swarm Optimization (PSO)</li>
+                        <li>Genetic Algorithm</li>
+                        <li>Crowding Optimization Method</li>
+                        <li>Scatter Search</li>
+                    </div>  
+                   
+                     <!-- COPY FROM HERE-->
+                     <button id="startQuizBtn" class="quiz-button">Take the Quiz!</button>
+                     <!-- Quiz Modal -->
+                     <div id="quizModal" class="modal">
+                         <div class="modal-content">
+                         <span class="close">&times;</span>
+                         <h1>Quiz: What did you learn?</h1>
+                         <p>Which technique in Fractal Compression is used to quantify the similarity between range and domain blocks?</p>
+                         <button onclick="checkAnswer('incorrect')">TIterated Function Systems (IFS)</button>
+                         <button onclick="checkAnswer('incorrect')">Quadtree Compression</button>
+                         <button onclick="checkAnswer('correct')">Similarity Measures</button>
+                         </div>
+                     </div>
+ 
+                     <canvas id="my-canvas"></canvas>
+                      <!-- COPY END HERE-->
+
+              </div>
+
+        </div>
+      </div>
+      <!-- // Main Content -->
+
+      <!-- Sidebar -->
+      <div class="sidebar single">
+
+        <div class="section popular">
+          <h2 class="section-title">Other lossy compression algorithms</h2>
+
+          <div class="post clearfix">
+            <img src="images/transform_coding.png" alt="" class="post-images">
+            <a href="lossy_tranc.html" class="title">
+              <h4>Transform Coding</h4>
+            </a>
+          </div>
+          <div class="post clearfix">
+            <img src="images/discrete_cosine_transform.png" alt="" class="post-images">
+            <a href="lossy_dct.html" class="title">
+              <h4>Discrete Cosine Transform</h4>
+            </a>
+          </div>
+          <div class="post clearfix">
+            <img src="images/discrete_wavele_transform.png" alt="" class="post-images">
+            <a href="lossy_dwt.html" class="title">
+              <h4>Discrete Wavelet Transform</h4>
+            </a>
+
+        </div>
+
+        <div class="section topics">
+          <h2 class="section-title">Other topics</h2>
+          <ul>
+            <li><a href="lossy.html">Lossy Image Compression</a></li>
+            <li><a href="lossless.html">Lossless Image Compression</a></li>
+            <li><a href="compare.html">Comparison</a></li>
+            <li><a href="reference.html">Reference List</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- // Sidebar -->
+
+    </div>
+    <!-- // Content -->
+
+  </div>
+  <!-- // Page Wrapper -->
+
+<!-- footer -->
+<div class="footer">
+  <div class="footer-content">
+
+    <div class="footer-section about">
+      <h1 class="logo-text">CS1102-Course Project-2023/24 Semester B</h1>
+      <p>
+        Group members: Gisela Gwen Michelle (57189835), Hyeongyeong Son(57580086), Leung Kwan Nok(57841790), Law Ho Ming(57846852) 
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; CS1102-Course Project-2023/24 Semester B<br>
+  </div>
+</div>
+<!-- // footer -->
+
+
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="js/scripts.js"></script>
+
+  <!-- COPY FROM HERE-->
+<script>
+  // Modal handling and quiz logic
+  document.addEventListener('DOMContentLoaded', function() {
+var modal = document.getElementById("quizModal");
+var btn = document.getElementById("startQuizBtn");
+var span = document.getElementsByClassName("close")[0];
+var confettiCanvas = document.getElementById("my-canvas");
+var confetti = new ConfettiGenerator({ target: 'my-canvas' });
+
+// Hide the canvas initially to avoid extra space
+confettiCanvas.style.display = "none";
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  confettiCanvas.style.display = "none"; // Ensure canvas is hidden when the modal is closed
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    confettiCanvas.style.display = "none"; // Ensure canvas is hidden when clicking outside the modal
+  }
+}
+
+window.checkAnswer = function(answer) {
+  if (answer === 'correct') {
+    modal.style.display = "none";
+    confettiCanvas.style.display = "block"; // Make the canvas visible for confetti
+    confetti.render();
+    alert("You are correct!"); // Show confirmation for a correct answer
+    setTimeout(function() {
+      confetti.clear();
+      confettiCanvas.style.display = "none"; // Hide the canvas after the confetti is cleared
+    }, 5000); // Stop confetti after 5 seconds
+  } else {
+    alert("Oops! Try again.");
+  }
+}
+});
+
+  // Make sure to set the display of the canvas to 'none' initially
+  confettiCanvas.style.display = "none";
+</script>
+
+<style>
+  /* Additional styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #my-canvas {
+  display: none; /* Add this line */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  }
+</style>
+
+<!-- COPY END HERE-->
+
+</body>
+
+</html>

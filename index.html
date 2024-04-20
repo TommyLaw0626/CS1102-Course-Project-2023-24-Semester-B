@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>CS1102-Course Project-2023/24 Semester B</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>Image</span>Compression</h1>
+    </div>
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lossless.html">Lossless</a></li>
+      <li><a href="lossy.html">Lossy</a></li>
+      <li><a href="reference.html">References</a></li>
+    </ul>
+  </header>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+      
+
+        <div>
+        <h1 style="text-align: center;">CS1102 - Course Project - 2022/2023 Semester B</h1>
+        <h2 style="text-align: center;">Different image compression algorithms</h2>
+        <p style="text-align: center;">Gisela Gwen Michelle (57189835), Hyeongyeong Son(57580086), Leung Kwan Nok(57841790), Law Ho Ming(57846852)</p>
+
+
+
+        <p style="text-align: center;" >
+          <strong> Coding Techniques our group has demonstrated</strong>
+            <ul>
+              <li><strong>HTML:</strong> Tags eg. header, div, ul, li. </li>
+              <li><strong>CSS:</strong> A style sheet (style.css) contain most of the custom styles. </li>
+              <li><strong>JavaScript:</strong> Script.js which contain most of the interactive elements and handling quiz interactions. </li>
+              <li><strong>Responsive Design:</strong> Our images are designed to be responsive and can adapt to difference screen or window size</li>  
+            </ul>
+        </p>
+  
+        <p style="text-align: center;"> 
+          <strong> Lossless Compression Techniques</strong>
+            <ul>
+              <li><strong>Huffman Coding:</strong> The encoded bits are unique for each data and stored in Huffman code dictionary. </li>
+              <li><strong>Arithmetic Coding:</strong> Uses continuous numbers that assign fractional values to the symbols based on their probabilities. </li>
+              <li><strong>Lempel-Ziv-Welch (LZW) Encoding:</strong> Transforming strings into codes to get the image compressed. </li>
+            </ul>
+        </p>
+  
+        <p style="text-align: center;">
+          <strong> Lossy Compression Techniques</strong>
+            <ul>
+              <li><strong>Transform Coding:</strong> An universally used compression technique for lossy compression that is applied for digital signal processing, data compression, and image and audio compression. </li>
+              <li><strong>Discrete Cosine Transform (DCT):</strong> Means a substantial amount of information is stored in an extremely low frequency component of a signal and other frequencies have very small data that can be contained by using little number of bits. </li>
+              <li><strong>Discrete Wavelet Transform (DWT):</strong> Convert image pixels into wavelets, which are then used for wavelet-based compression and coding. </li>
+              <li><strong>Fractal Compression: </strong>Seeks to construct an approximation of the original image that is precise enough to be acceptable, closer to the original at higher compression ratios. </li>
+            </ul>
+        </p>
+
+
+        </div>
+
+
+    <!-- Post Slider -->
+    <div class="post-slider">
+      <h2 class="slider-title">Algorithms of Lossless and Lossy Compression uses</h2>
+      <i class="fas fa-chevron-left prev"></i>
+      <i class="fas fa-chevron-right next"></i>
+
+      <div class="post-wrapper">
+
+        <div class="post">
+          <img src="images/huffman_coding.png" alt="" class="slider-image">
+          <div class="post-info">
+            <h4><a href="lossless_hc.html">Huffman Coding</a></h4>
+            <i class="far fa-user"> Lossless</i>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="images/arithmetic_coding.png" alt="" class="slider-image">
+          <div class="post-info">
+            <h4><a href="lossless_ac.html">Arithmetic Coding</a></h4>
+            <i class="far fa-user"> Lossless</i>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="images/lempel_ziv_welch.png" alt="" class="slider-image">
+          <div class="post-info">
+            <h4><a href="lossless_ac.html">Lempel Ziv Welch Encoding</a></h4>
+            <i class="far fa-user"> Lossless</i>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="images/transform_coding.png" alt="" class="slider-image">
+          <div class="post-info">
+            <h4><a href="lossy_tranc.html">Transform Coding</a></h4>
+            <i class="far fa-user"> Lossy</i>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="images/discrete_cosine_transform.png" alt="" class="slider-image">
+          <div class="post-info">
+            <h4><a href="lossy_dct.html">Discrete Cosine Transform</a></h4>
+            <i class="far fa-user"> Lossy</i>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="images/discrete_wavele_transform.png" alt="" class="slider-image">
+          <div class="post-info">
+            <h4><a href="lossy_dwt.html">Discrete Wavelet Transform</a></h4>
+            <i class="far fa-user"> Lossy</i>
+          </div>
+        </div>
+
+        <div class="post">
+          <img src="images/fractal_compression.png" alt="" class="slider-image">
+          <div class="post-info">
+            <h4><a href="lossy_fc.html">Fractal Compression</a></h4>
+            <i class="far fa-user"> Lossy</i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- // Post Slider -->
+
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h2 class="recent-post-title">Content</h2>
+
+        <div class="post clearfix">
+          <img src="images/lossy_image_compression.png" alt="" class="post-image">
+          <div class="post-preview">
+            <h2><a href="lossy.html">What is Lossy Image Compression?</a></h2>
+            <i class="far fa-user"> Lossy</i>
+            &nbsp;
+            <p class="preview-text">
+              A type of image compression that reduces file size.
+            </p>
+            <a href="lossy.html" class="btn read-more">Read More</a>
+          </div>
+        </div>
+
+        <div class="post clearfix">
+          <img src="images/lossless_image_compression.png" alt="" class="post-image">
+          <div class="post-preview">
+            <h2><a href="lossless.html">What is Lossless Image Compression?</a></h2>
+            <i class="far fa-user"> Lossless</i>
+            &nbsp;
+            <p class="preview-text">
+              A type of image compression that rewrites the algorithm mathematically in a more efficient way.
+            </p>
+            <a href="single.html" class="btn read-more">Read More</a>
+          </div>
+        </div>
+        <div class="post clearfix">
+          <img src="images/comparison.png" alt="" class="post-image">
+          <div class="post-preview">
+            <h2><a href="compare.html">Comparison between Lossy and Lossless Image Compression</a></h2>
+            <p class="preview-text">
+            Comparing the function, file types, pro and cons between Lossy and Lossless Image Compression
+            </p>
+            <a href="compare.html" class="btn read-more">Read More</a>
+          </div>
+        </div>
+        <div class="post clearfix">
+          <img src="images/reference_list.png" alt="" class="post-image">
+          <div class="post-preview">
+            <h2><a href="reference.html">Reference list</a></h2>
+            <a href="reference.html" class="btn read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    <!-- // Content -->
+
+  </div>
+  <!-- // Page Wrapper -->
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text">CS1102-Course Project-2023/24 Semester B</h1>
+        <p>
+          Group members: Gisela Gwen Michelle (57189835), Hyeongyeong Son(57580086), Leung Kwan Nok(57841790), Law Ho Ming(57846852) 
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; CS1102-Course Project-2023/24 Semester B<br>
+    </div>
+  </div>
+  <!-- // footer -->
+
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

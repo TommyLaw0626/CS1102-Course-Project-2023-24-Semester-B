@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js/dist/index.min.js"></script>
+
+  <title>Discrete Cosine Transform</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>Image</span>Compression</h1>
+    </div>
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lossless.html">Lossless</a></li>
+      <li><a href="lossy.html">Lossy</a></li>
+      <li><a href="reference.html">References</a></li>
+    </ul>
+  </header>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Main Content Wrapper -->
+      <div class="main-content-wrapper">
+        <div class="main-content single">
+          <h1 class="post-title">Discrete Cosine Transform (DCT)</h1>
+
+          <div class="post-content">
+            <p>Discrete Cosine Transform (DCT) is a transform technique that has very strong energy compaction, which means a substantial amount of information is stored in an extremely low frequency component of a signal and other frequencies have very small data that can be contained by using little number of bits (usually 2 or 3 bit maximum)
+            </p>
+              <p> 
+                Steps:
+                <div>
+                  <ol>
+                    <li>Fetch image file information with pixel value in terms of integer within the range of 0 to 255</li>
+                    <li>Divide the pixel value in block of 8×8 matrix</li>
+                    <li>Apply Discrete Cosine Transform (DCT) on the block of data in Step 2.</li> 
+                    <li>Observe that more than 90% of the data will be in the lower frequency component</li> 
+                    <li>Perform a 2-dimensional Discrete Cosine Transform on the data observed in Step 4 to observe the output</li> 
+                  </ol>
+                </div>  
+              
+              Example:<br>
+               
+                1. By having a 2-dimensional variable named ‘matrix of dimension 8×8’ which has image information and another 2-dimensional variable named ‘dct of same dimension’ which has the information after applying Discrete Cosine Transform. <br>
+                2. <br>
+                <img src="images/dct_formula.PNG" alt="" class="post-images"> <br>
+                3. Then apply the formula to all values: from i=0 to m-1 and j=0 to n-1
+                <strong>sum(k=0 to m-1) </strong>→ denotes summation of values from k=0 to k=m-1
+                In this code, <strong>both m and n is equal to 8 and pi is defined as 3.142857</strong> <br>
+                
+                4. <br>
+                <img src="images/dct_1.jpg" alt="" class="post-images"> <br>
+                <img src="images/dct_2.jpg" alt="" class="post-images"> <br>
+                <img src="images/dct_3.jpg" alt="" class="post-images"> <br>
+                <img src="images/dct_4.jpg" alt="" class="post-images"> <br>
+
+                <button id="startQuizBtn" class="quiz-button">Take the Quiz!</button>
+                <!-- Quiz Modal -->
+                <div id="quizModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Quiz Question</h1>
+                    <p>What percentage of data is typically found in the lower frequency components after applying DCT?</p>
+                    <button onclick="checkAnswer('correct')">More than 90%</button>
+                    <button onclick="checkAnswer('incorrect')">Less than 50%</button>
+                    <button onclick="checkAnswer('incorrect')">Exactly 50%</button>
+                  </div>
+                </div>
+
+
+                <canvas id="my-canvas"></canvas>
+
+              </div>
+
+        </div>
+      </div>
+      <!-- // Main Content -->
+
+      <!-- Sidebar -->
+      <div class="sidebar single">
+
+        <div class="section popular">
+          <h2 class="section-title">Other lossy compression algorithms</h2>
+
+          <div class="post clearfix">
+            <img src="images/transform_coding.png" alt="" class="post-images">
+            <a href="lossy_tranc.html" class="title">
+              <h4>Transform Coding</h4>
+            </a>
+          </div>
+          <div class="post clearfix">
+            <img src="images/discrete_wavele_transform.png" alt="" class="post-images">
+            <a href="lossy_dwt.html" class="title">
+              <h4>Discrete Wavelet Transform</h4>
+            </a>
+          </div>
+          <div class="post clearfix">
+            <img src="images/fractal_compression.png" alt="" class="post-images">
+            <a href="lossy_fc.html" class="title">
+              <h4>Fractal Compression</h4>
+            </a>
+
+        </div>
+
+        <div class="section topics">
+          <h2 class="section-title">Other topics</h2>
+          <ul>
+            <li><a href="lossy.html">Lossy Image Compression</a></li>
+            <li><a href="lossless.html">Lossless Image Compression</a></li>
+            <li><a href="compare.html">Comparison</a></li>
+            <li><a href="reference.html">Reference List</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- // Sidebar -->
+
+    </div>
+    <!-- // Content -->
+
+  </div>
+  <!-- // Page Wrapper -->
+
+<!-- footer -->
+<div class="footer">
+  <div class="footer-content">
+
+    <div class="footer-section about">
+      <h1 class="logo-text">CS1102-Course Project-2023/24 Semester B</h1>
+      <p>
+        Group members: Gisela Gwen Michelle (57189835), Hyeongyeong Son(57580086), Leung Kwan Nok(57841790), Law Ho Ming(57846852) 
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; CS1102-Course Project-2023/24 Semester B<br>
+  </div>
+</div>
+<!-- // footer -->
+
+
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="js/scripts.js"></script>
+
+  <!-- COPY FROM HERE-->
+<script>
+  // Modal handling and quiz logic
+  document.addEventListener('DOMContentLoaded', function() {
+var modal = document.getElementById("quizModal");
+var btn = document.getElementById("startQuizBtn");
+var span = document.getElementsByClassName("close")[0];
+var confettiCanvas = document.getElementById("my-canvas");
+var confetti = new ConfettiGenerator({ target: 'my-canvas' });
+
+// Hide the canvas initially to avoid extra space
+confettiCanvas.style.display = "none";
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  confettiCanvas.style.display = "none"; // Ensure canvas is hidden when the modal is closed
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    confettiCanvas.style.display = "none"; // Ensure canvas is hidden when clicking outside the modal
+  }
+}
+
+window.checkAnswer = function(answer) {
+  if (answer === 'correct') {
+    modal.style.display = "none";
+    confettiCanvas.style.display = "block"; // Make the canvas visible for confetti
+    confetti.render();
+    alert("You are correct!"); // Show confirmation for a correct answer
+    setTimeout(function() {
+      confetti.clear();
+      confettiCanvas.style.display = "none"; // Hide the canvas after the confetti is cleared
+    }, 5000); // Stop confetti after 5 seconds
+  } else {
+    alert("Oops! Try again.");
+  }
+}
+});
+
+  // Make sure to set the display of the canvas to 'none' initially
+  confettiCanvas.style.display = "none";
+</script>
+
+<style>
+  /* Additional styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #my-canvas {
+  display: none; /* Add this line */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  }
+</style>
+
+<!-- COPY END HERE-->
+
+</body>
+
+</html>

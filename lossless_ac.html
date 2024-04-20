@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js/dist/index.min.js"></script>
+
+  <title>Arithmetic Coding</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>Image</span>Compression</h1>
+    </div>
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lossless.html">Lossless</a></li>
+      <li><a href="lossy.html">Lossy</a></li>
+      <li><a href="reference.html">References</a></li>
+    </ul>
+  </header>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Main Content Wrapper -->
+      <div class="main-content-wrapper">
+        <div class="main-content single">
+          <h1 class="post-title">Arithmetic Coding</h1>
+
+          <div class="post-content">
+            
+               
+                <div>
+                    <li>While Huffman code uses discrete numbers to represent the code, arithmetic coding uses continuous numbers that assign fractional values to the symbols based on their probabilities. </li>
+                    <li>Arithmetic coding needs more computational resources, but it generates higher compression ratios compared to Huffman.</li>
+                    <li>Use for JPEG 2000.</li>
+                </div>  
+                <img src="images/ac_1.png" alt="" class="post-images"> <br>
+             
+
+              
+              <p>Example:</p>
+              <img src="images/ac_2.PNG" alt="" class="post-images"> <br>
+              <img src="images/ac_3.png" alt="" class="post-images"> <br>
+              <p>Difference=upper limit - lower limit <br>
+                 Range=lower limit to lower limit + difference (probability of symbol) <br>
+                 <b>Output: [0.6607,0.66303]</b> 
+              </p>
+
+              <p>
+                 As shown by the example, Arithmetic coding has a higher error rate compared to Huffman coding due to the detailed decimals. If the decimal is wrong, it will generate a different final output.
+
+              </p>
+            
+              <!--<img src="images/hc_7.png" style="display:inline-block;"> <img src="images/hc_8.png"  style="display:inline-block;"> -->
+        
+              <!--COPY FROM HERE-->
+              <button id="startQuizBtn" class="quiz-button">Take the Quiz!</button>
+              <!-- Quiz Modal -->
+              <div id="quizModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h1>Quiz Question</h1>
+                  <p>Why does Arithmetic Coding have a higher error rate compared to Huffman Coding?</p>
+                  <button onclick="checkAnswer('incorrect')">Due to the rounding of coefficients to a smaller number of bits</button>
+                  <button onclick="checkAnswer('correct')">Because of the detailed decimals and their precise representation</button>
+                  <button onclick="checkAnswer('incorrect')">It uses discrete numbers to represent the code</button>
+                </div>
+              </div>
+
+
+              <canvas id="my-canvas"></canvas>
+              <!--COPY END HERE-->
+              
+              </div>
+
+        </div>
+      </div>
+      <!-- // Main Content -->
+
+<!-- Sidebar -->
+<div class="sidebar single">
+
+  <div class="section popular">
+    <h2 class="section-title">Other lossless compression algorithms</h2>
+
+    <div class="post clearfix">
+      <img src="images/huffman_coding.png" alt="" class="post-images">
+      <a href="lossless_hc.html" class="title">
+        <h4>Huffman Coding</h4>
+      </a>
+    </div>
+
+    <div class="post clearfix">
+      <img src="images/lempel_ziv_welch.png" alt="" class="post-images">
+      <a href="lossless_lzw.html" class="title">
+        <h4>Lempel Ziv Welch Encoding</h4>
+      </a>
+  </div>
+
+
+  </div>
+
+  <div class="section topics">
+    <h2 class="section-title">Other topics</h2>
+    <ul>
+      <li><a href="lossy.html">Lossy Image Compression</a></li>
+      <li><a href="lossless.html">Lossless Image Compression</a></li>
+      <li><a href="compare.html">Comparison</a></li>
+      <li><a href="reference.html">Reference List</a></li>
+    </ul>
+  </div>
+</div>
+<!-- // Sidebar -->
+
+
+    </div>
+    <!-- // Content -->
+
+  </div>
+  <!-- // Page Wrapper -->
+
+<!-- footer -->
+<div class="footer">
+  <div class="footer-content">
+
+    <div class="footer-section about">
+      <h1 class="logo-text">CS1102-Course Project-2023/24 Semester B</h1>
+      <p>
+        Group members: Gisela Gwen Michelle (57189835), Hyeongyeong Son(57580086), Leung Kwan Nok(57841790), Law Ho Ming(57846852) 
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; CS1102-Course Project-2023/24 Semester B<br>
+  </div>
+</div>
+<!-- // footer -->
+
+
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="js/scripts.js"></script>
+
+  <!-- COPY FROM HERE-->
+<script>
+  // Modal handling and quiz logic
+  document.addEventListener('DOMContentLoaded', function() {
+var modal = document.getElementById("quizModal");
+var btn = document.getElementById("startQuizBtn");
+var span = document.getElementsByClassName("close")[0];
+var confettiCanvas = document.getElementById("my-canvas");
+var confetti = new ConfettiGenerator({ target: 'my-canvas' });
+
+// Hide the canvas initially to avoid extra space
+confettiCanvas.style.display = "none";
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  confettiCanvas.style.display = "none"; // Ensure canvas is hidden when the modal is closed
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    confettiCanvas.style.display = "none"; // Ensure canvas is hidden when clicking outside the modal
+  }
+}
+
+window.checkAnswer = function(answer) {
+  if (answer === 'correct') {
+    modal.style.display = "none";
+    confettiCanvas.style.display = "block"; // Make the canvas visible for confetti
+    confetti.render();
+    alert("You are correct!"); // Show confirmation for a correct answer
+    setTimeout(function() {
+      confetti.clear();
+      confettiCanvas.style.display = "none"; // Hide the canvas after the confetti is cleared
+    }, 5000); // Stop confetti after 5 seconds
+  } else {
+    alert("Oops! Try again.");
+  }
+}
+});
+
+  // Make sure to set the display of the canvas to 'none' initially
+  confettiCanvas.style.display = "none";
+</script>
+
+<style>
+  /* Additional styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #my-canvas {
+  display: none; /* Add this line */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  }
+</style>
+
+<!-- COPY END HERE-->
+
+</body>
+
+</html>

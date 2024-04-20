@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Lossless Image Compression</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>Image</span>Compression</h1>
+    </div>
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lossless.html">Lossless</a></li>
+      <li><a href="lossy.html">Lossy</a></li>
+      <li><a href="reference.html">References</a></li>
+    </ul>
+  </header>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Content -->
+    <div class="content clearfix">
+
+      <!-- Main Content Wrapper -->
+      <div class="main-content-wrapper">
+        <div class="main-content single">
+          <h1 class="post-title">What is Lossless Image Compression Algorithm?</h1>
+
+          <div class="post-content">
+            
+                <div>
+                  <b>What is Lossless Image Compression?</b>
+                  <p>Lossless Image Compression is a type of image compression that rewrites the algorithm mathematically in a more efficient way. Lossless carries all the image file information which results in the identical appearance of the image quality but in smaller file size. As such, no details will be lost throughout the process, and can be perfectly reconstructed from the compressed data. This makes lossless compression often called the “reversible” compression. </p>
+                  <b>How can Lossless compression reduce the size while maintaining the exact quality? Let’s see how the algorithms do their magic!</b>
+                  <p>1. Run-length encoding (RLE) – PCX, BMP, TGA, TIFF</p>
+                  <img src="images/lossless.PNG" alt="" class="post-images">
+                  <ul>
+                  <li>Substitute the repeating occurrences of characters by that character followed by the number of repetitions. Generating shorter and simpler bits of data.</li>
+                  <li>However, it may not perform well on too complex images and/or even lead to more bytes if there is not much repetition, for example “abcde” will be transformed to “a1b1c1d1e1”</li>
+                </ul>
+                  <p>2.	Variable-length coding (Huffman, Arithmetic Coding)</p>
+                  <ul>
+                    <li>Principal: encode the lower number of bits for the data with higher frequency of appearance. Therefore, resulting in fewer bits than the original string characters.</li> 
+                    </ul>
+                    <b>Lossless Image Compression Algorithms</b>
+                    <li><a href="lossless_hc.html">Huffman Coding</a></li>
+                    <li><a href="lossless_ac.html">Arithmetic Coding</a></li>
+                </div>
+
+                
+
+
+              <!--<img src="images/hc_7.png" style="display:inline-block;"> <img src="images/hc_8.png"  style="display:inline-block;"> -->
+        
+            
+              </div>
+
+        </div>
+      </div>
+      <!-- // Main Content -->
+
+<!-- Sidebar -->
+<div class="sidebar single">
+
+  <div class="section popular">
+    <h2 class="section-title">Lossless compression algorithms</h2>
+
+    <div class="post clearfix">
+      <img src="images/huffman_coding.png" alt="" class="post-images">
+      <a href="lossless_hc.html" class="title">
+        <h4>Huffman Coding</h4>
+      </a>
+    </div>
+    <div class="post clearfix">
+      <img src="images/arithmetic_coding.png" alt="" class="post-images">
+      <a href="lossless_ac.html" class="title">
+        <h4>Arithmetic Coding</h4>
+      </a>
+    </div>
+    <div class="post clearfix">
+      <img src="images/lempel_ziv_welch.png" alt="" class="post-images">
+      <a href="lossless_lzw.html" class="title">
+        <h4>Lempel Ziv Welch Encoding</h4>
+      </a>
+    </div>
+
+  <div class="section topics">
+    <h2 class="section-title">Other topics</h2>
+    <ul>
+      <li><a href="lossy.html">Lossy Image Compression</a></li>
+      <li><a href="compare.html">Comparison</a></li>
+      <li><a href="reference.html">Reference List</a></li>
+    </ul>
+  </div>
+</div>
+<!-- // Sidebar -->
+      
+    </div>
+    <!-- // Content -->
+
+  </div>
+  <!-- // Page Wrapper -->
+
+<!-- footer -->
+<div class="footer">
+  <div class="footer-content">
+
+    <div class="footer-section about">
+      <h1 class="logo-text">CS1102-Course Project-2023/24 Semester B</h1>
+      <p>
+        Group members: Gisela Gwen Michelle (57189835), Hyeongyeong Son(57580086), Leung Kwan Nok(57841790), Law Ho Ming(57846852) 
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; CS1102-Course Project-2023/24 Semester B<br>
+  </div>
+</div>
+<!-- // footer -->
+
+
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Slick Carousel -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
